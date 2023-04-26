@@ -13,12 +13,13 @@ A movie web service built with ReactJS Class Components
 - State
 - Props
 - Class Components
+- Axios
 - Data Fetching
 - Routing
 
 ### Features
 
-- Fetch movies from Torrent API
+- Fetch movies from YTS API
 - Sort popular movies based on Torrent ratings
 - Provide the movie details (title, year, poster, genre, language, rating, synopsis, torrent download link)
 - Dynamic routes using Query parameter
