@@ -1,7 +1,13 @@
 import React from "react";
+import "./About.css";
 
-function About() {
-  return <h1>About</h1>;
+function About(props) {
+  console.log(props);
+  return (
+    <div>
+      <span>About</span>
+    </div>
+  );
 }
 
 export default About;
