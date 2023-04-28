@@ -18,7 +18,7 @@ A movie web service built with ReactJS Class Components
 - Data Fetching
 - Routing
 - HashRouter
-- Navigation
+- useNavigation
 - useLocation
 
 ### Features
