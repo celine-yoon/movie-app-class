@@ -5,7 +5,7 @@ import "./Detail.css";
 
 function Detail() {
   let { state } = useLocation();
-  const navigate = useNavigate();
+  let navigate = useNavigate();
 
   useEffect(() => {
     if (state === null) {
@@ -13,29 +13,27 @@ function Detail() {
     }
   }, [state, navigate]);
 
-  const { title, year, poster, genres, summary } = state;
+  const { title, year, poster, genres, summary } = state ?? {};
 
   return (
     <div>
-      {state ? (
-        <div className="detail_container">
-          <div className="detail">
-            <img src={poster} alt={title} title={title} />
-            <div className="movie_data">
-              <p className="movie_title">{title}</p>
-              <p className="movie_year">{year}</p>
-              <ul className="genres">
-                {genres.map((genre, index) => (
-                  <li key={index} className="genre">
-                    {genre}
-                  </li>
-                ))}
-              </ul>
-              <p className="movie_summary">{summary}</p>
-            </div>
+      <div className="detail_container">
+        <div className="detail">
+          <img src={poster} alt={title} title={title} />
+          <div className="movie_data">
+            <p className="movie_title">{title}</p>
+            <p className="movie_year">{year}</p>
+            <ul className="genres">
+              {genres?.map((genre, index) => (
+                <li key={index} className="genre">
+                  {genre}
+                </li>
+              ))}
+            </ul>
+            <p className="movie_summary">{summary}</p>
           </div>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }
