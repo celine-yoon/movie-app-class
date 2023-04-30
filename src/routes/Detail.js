@@ -13,7 +13,9 @@ function Detail() {
     }
   }, [state, navigate]);
 
-  const { title, year, poster, genres, summary } = state ?? {};
+  const { title, year, poster, genres, summary } = state ?? {
+    title: "Wrong Approach",
+  };
 
   return (
     <div>
