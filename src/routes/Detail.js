@@ -18,7 +18,7 @@ function Detail() {
   return (
     <div>
       {state ? (
-        <div className="container">
+        <div className="detail_container">
           <div className="detail">
             <img src={poster} alt={title} title={title} />
             <div className="movie_data">
