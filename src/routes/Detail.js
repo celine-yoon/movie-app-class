@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./Detail.css";
 
 function Detail() {
   let { state } = useLocation();
@@ -12,7 +13,31 @@ function Detail() {
     }
   }, [state, navigate]);
 
-  return <div>{state ? <h1>{state.title}</h1> : null}</div>;
+  const { title, year, poster, genres, summary } = state;
+
+  return (
+    <div>
+      {state ? (
+        <div className="container">
+          <div className="detail">
+            <img src={poster} alt={title} title={title} />
+            <div className="movie_data">
+              <p className="movie_title">{title}</p>
+              <p className="movie_year">{year}</p>
+              <ul className="genres">
+                {genres.map((genre, index) => (
+                  <li key={index} className="genre">
+                    {genre}
+                  </li>
+                ))}
+              </ul>
+              <p className="movie_summary">{summary}</p>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 export default Detail;

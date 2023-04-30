@@ -1,0 +1,30 @@
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+  left: 10px;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 5px #dfe4ea;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #b8c1d1;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1090px) {
+  .nav {
+    left: initial;
+    top: initial;
+    bottom: 0px;
+    width: 100%;
+  }
+}
